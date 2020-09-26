@@ -80,7 +80,7 @@ class Bomber:
         # start process with bomber
         process = subprocess.Popen(["b0mb3r", "--only-api", "--port", f"{port}"])
 
-        time.sleep(10)
+        time.sleep(15)
         base_url = f"http://127.0.0.1:{port}"
 
         try:
