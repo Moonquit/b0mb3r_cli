@@ -33,14 +33,14 @@ setup(
     },
     install_requires=REQUIRED,
     extras_require={},
-    license="Mozilla Public License 2.0",
+    license="MIT",
     classifiers=[
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
         "Operating System :: Android",
         "Operating System :: Microsoft :: Windows",
         "Topic :: Internet",
-        "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+        "License :: OSI Approved :: MIT",
     ],
 )
