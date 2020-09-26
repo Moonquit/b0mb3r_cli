@@ -86,6 +86,7 @@ bomber.custom_start()
 ## 📝 Лицензия
 Проект распространяется под лицензией [MIT](https://github.com/Moonquit/b0mb3r_cli/blob/master/LICENSE). Скачивая программное обеспечение из [этого](https://github.com/Moonquit/b0mb3r_cli) репозитория, вы соглашаетесь с ней. По условиям лицензии вы обязаны упоминать автора и лицензию в своей работе.
 
-## Stargazers over time
+<!-- ## Stargazers over time
 
 [![Stargazers over time](https://starchart.cc/Moonquit/b0mb3r_cli.svg)](https://starchart.cc//Moonquit/b0mb3r_cli)
+--!>
