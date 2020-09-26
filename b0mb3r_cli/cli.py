@@ -3,8 +3,6 @@ from pathlib import Path
 
 import click
 
-from .__main__ import cli_start
-
 
 @click.command()
 def main():

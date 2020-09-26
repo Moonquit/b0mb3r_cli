@@ -5,8 +5,8 @@ import subprocess
 
 import requests
 
-import config
-import preview
+from . import config
+from . import preview
 
 
 def write_lang(lang: str = None):
