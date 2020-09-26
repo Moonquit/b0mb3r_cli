@@ -45,8 +45,9 @@ python setup.py install
 
 
 ## 🚩 Запуск
-
+<!--
 Всё просто! Введите команду `b0mb3r_cli` или `bomber_cli` и интерфейс бомбера будет запущен. Команда доступна из любой директории. Также, возможен запуск:
+--> 
  ### Linux:
  ```sh
  cd b0mb3r
@@ -89,4 +90,4 @@ bomber.custom_start()
 <!-- ## Stargazers over time
 
 [![Stargazers over time](https://starchart.cc/Moonquit/b0mb3r_cli.svg)](https://starchart.cc//Moonquit/b0mb3r_cli)
---!>
+-->

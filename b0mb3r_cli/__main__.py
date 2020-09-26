@@ -296,7 +296,7 @@ class Bomber:
 
 if __name__ == "__main__":
     try:
-        bomber = Bomber()
+        bomber = Bomber(lang=get_lang())
         bomber.main_menu()
     except KeyboardInterrupt:
         print()
