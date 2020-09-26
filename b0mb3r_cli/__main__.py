@@ -294,6 +294,15 @@ class Bomber:
             exit("b0mb3r CLI stopped!")
 
 
+def cli_start():
+    try:
+        bomber = Bomber(lang=get_lang())
+        bomber.main_menu()
+    except KeyboardInterrupt:
+        print()
+        exit("b0mb3r CLI stopped!")
+
+
 if __name__ == "__main__":
     try:
         bomber = Bomber(lang=get_lang())
