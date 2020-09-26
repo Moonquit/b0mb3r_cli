@@ -33,9 +33,9 @@
      
 2. **Установите b0mb3r_cli**, введя следующие команды в [командную строку](http://comp-profi.com/kak-vyzvat-komandnuyu-stroku-ili-konsol-windows/) (Windows), терминал (Linux) или Termux (Android):
 
-```sh
-pip3 install git+https://github.com/Moonquit/b0mb3r_cli.git
-```
+ ```sh
+ pip3 install git+https://github.com/Moonquit/b0mb3r_cli.git
+ ```
 > Если у вас ещё не был установлен [b0mb3r](https://github.com/crinny/b0mb3r), то он будет автоматически установлен!
 
 
