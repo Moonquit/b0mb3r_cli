@@ -1,15 +1,14 @@
 <h1 align="center">Добро пожаловать в b0mb3r CLI 👋</h1>
 <p align="center">
-    CLI для смс-бомбера [b0mb3r](https://github.com/crinny/b0mb3r)
+    CLI для смс-бомбера <a href=https://github.com/crinny/b0mb3r>b0mb3r</a>
     <br /><br />
     <img alt="Made with Python" src="https://img.shields.io/badge/Made%20with-Python-%23FFD242?logo=python&logoColor=white">
     <img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg">
-    <img alt="time tracker" src="https://wakatime.com/badge/github/Moonquit/b0mb3r_cli.svg">
 </p>
 
 
 ## 📍 Что это такое?
-    b0mb3r_cli - это «консольная утилита‎» или ‎«расширение» для работы с [b0mb3r](https://github.com/crinny/b0mb3r). Также вы можете использовать `b0mb3r_cli`, 
+ > b0mb3r_cli - это «консольная утилита‎» или ‎«расширение» для работы с [b0mb3r](https://github.com/crinny/b0mb3r). Также вы можете использовать `b0mb3r_cli`, 
 как класс (импортируя класс `Bomber` из модуля `b0mb3r_cli`). Примеры ниже 
 
 
@@ -20,7 +19,6 @@
     #### Для Windows
 
     Скачайте установщик с [официального сайта](https://www.python.org/downloads/) и запустите его. Убедитесь, что при установке отметили галочку ![Add Python to PATH](https://user-images.githubusercontent.com/42045258/69171091-557d2780-0b0c-11ea-8adf-7f819357f041.png)
-
     После установки `Python 3` установите [git](https://git-scm.com/download/win).
 
     #### Для Android
@@ -86,8 +84,8 @@ bomber.custom_start()
 ```
 
 ## 📝 Лицензия
-Проект распространяется под лицензией [MIT](https://github.com/Moonquit/b0mb3r_cli/LICENSE). Скачивая программное обеспечение из [этого](https://github.com/Moonquit/b0mb3r_cli) репозитория, вы соглашаетесь с ней. По условиям лицензии вы обязаны упоминать автора и лицензию в своей работе.
+Проект распространяется под лицензией [MIT](https://github.com/Moonquit/b0mb3r_cli/blob/master/LICENSE). Скачивая программное обеспечение из [этого](https://github.com/Moonquit/b0mb3r_cli) репозитория, вы соглашаетесь с ней. По условиям лицензии вы обязаны упоминать автора и лицензию в своей работе.
 
 ## Stargazers over time
 
-[![Stargazers over time](https://starchart.cc/Moonquit/b0mb3r_cli.svg)](https://starchart.cc/crinny/Moonquit/b0mb3r_cli)
+[![Stargazers over time](https://starchart.cc/Moonquit/b0mb3r_cli.svg)](https://starchart.cc//Moonquit/b0mb3r_cli)
