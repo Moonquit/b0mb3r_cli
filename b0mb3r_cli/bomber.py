@@ -67,32 +67,18 @@ class Bomber:
         # start process with bomber
         proc = subprocess.Popen(["b0mb3r", "--only-api", "--port", f"{port}"])
 
-        time.sleep(15)
+        time.sleep(20)
         base_url = f"http://127.0.0.1:{port}"
 
         try:
             attack_start = requests.post(
                 url=f"{base_url}/attack/start/",
                 json={"number_of_cycles": cycles, "phone": phone},
-            )
-
-            """
-            I decided to remove this piece of code (it's something of a log),
-            because I could not disable logs in b0mb3r :)
-
+            ).json()
 
             if attack_start["success"]:
                 attack_id = attack_start["id"]
                 url_check_status = f"{base_url}/attack/{attack_id}/status/"
-                
-                print()
-                if lang == "en":
-                    log_ok(f"Successful start -> timeout: {timeout}sec, number of cycles: {cycles}")
-                elif lang == "ru":
-                    log_ok(f"Успешный запуск -> таймаут: {timeout}сек, количество циклов: {cycles}")
-                elif lang == "ua":
-                    log_ok(f"Успішний запуск -> таймаут: {timeout}сек, кількість цилків: {cycles}")
-
 
                 bomber_work = True
                 count_done = 0
@@ -101,46 +87,36 @@ class Bomber:
                     try:
                         check_status = requests.get(url_check_status).json()
                     except requests.exceptions.RequestException as err:
-                        log_error(f"[status check]: {err}")
+                        Bomber.log_error(f"[status check]: {err}")
 
-                    count_total = int(check_status['end_at'])
-                    resp_count_done = int(check_status['currently_at'])
+                    count_total = int(check_status["end_at"])
+                    resp_count_done = int(check_status["currently_at"])
 
                     if resp_count_done > count_done:
-                        log_ok(f"Progress: {resp_count_done}/{count_total}")
-                    count_done = resp_count_done
+                        count_done = resp_count_done
 
                     if count_done == count_total:
-                        count_status =f"{count_done}/{count_total}"
-
+                        count_status = f"{count_done}/{count_total}"
+                        print()
                         if lang == "en":
-                            log_ok(f"Spam finished! -> {count_status}")
+                            Bomber.log_ok(f"Spam finished! -> {count_status}")
                         elif lang == "ua":
-                            log_ok(f"Спам завершено! -> {count_status}")
+                            Bomber.log_ok(f"Спам завершено! -> {count_status}")
                         elif lang == "ru":
-                            log_ok(f"Спам завершен! -> {count_status}")
+                            Bomber.log_ok(f"Спам завершен! -> {count_status}")
 
                         bomber_work = False
 
-                    time.sleep(timeout)
+                    time.sleep(1)
+                proc.kill()
 
             else:
-                log_error("[attack start]: Unknown error")
-            
-
-        if lang == "en":
-            log_ok(f"Spam finished!")
-        elif lang == "ua":
-            log_ok(f"Спам завершено!")
-        elif lang == "ru":
-            log_ok(f"Спам завершен!")
-
-        exit("b0mb3r CLI completed!")
-
-            """
+                Bomber.log_error("[attack start]: Unknown error")
 
         except requests.exceptions.RequestException as err:
             Bomber.log_error(f"[start spam]: {err}")
+        finally:
+            proc.kill()
 
     def custom_start(self):
         if self.lang == "en":
