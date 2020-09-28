@@ -78,7 +78,7 @@ class Bomber:
             log_ok("Запуск b0mb3r...")
 
         # start process with bomber
-        process = subprocess.Popen(["b0mb3r", "--only-api", "--port", f"{port}"])
+        proc = process = subprocess.Popen(["b0mb3r", "--only-api", "--port", f"{port}"])
 
         time.sleep(15)
         base_url = f"http://127.0.0.1:{port}"
@@ -151,6 +151,43 @@ class Bomber:
         exit("b0mb3r CLI completed!")
 
             """
+
+            if attack_start["success"]:
+                attack_id = attack_start["id"]
+                url_check_status = f"{base_url}/attack/{attack_id}/status/"
+
+                bomber_work = True
+                count_done = 0
+
+                while bomber_work:
+                    try:
+                        check_status = requests.get(url_check_status).json()
+                    except requests.exceptions.RequestException as err:
+                        log_error(f"[status check]: {err}")
+
+                    count_total = int(check_status["end_at"])
+                    resp_count_done = int(check_status["currently_at"])
+
+                    if resp_count_done > count_done:
+                        count_done = resp_count_done
+
+                    if count_done == count_total:
+                        count_status = f"{count_done}/{count_total}"
+                        print()
+                        if lang == "en":
+                            log_ok(f"Spam finished! -> {count_status}")
+                        elif lang == "ua":
+                            log_ok(f"Спам завершено! -> {count_status}")
+                        elif lang == "ru":
+                            log_ok(f"Спам завершен! -> {count_status}")
+
+                        bomber_work = False
+
+                    time.sleep(1)
+                    proc.kill()
+
+            else:
+                log_error("[attack start]: Unknown error")
 
         except requests.exceptions.RequestException as err:
             log_error(f"[start spam]: {err}")
