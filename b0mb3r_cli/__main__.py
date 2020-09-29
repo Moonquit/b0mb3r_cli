@@ -128,8 +128,6 @@ class Bomber:
 
         except requests.exceptions.RequestException as err:
             log_error(f"[start spam]: {err}")
-        finally:
-            proc.kill()
 
     def custom_start(self):
         if self.lang == "en":
